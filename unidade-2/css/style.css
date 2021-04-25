@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'Product Sans';
+    src: url('../fonts/ProductSans-Medium.ttf');
+}
+@font-face {
+    font-family: 'Product Sans Black';
+    src: url('../fonts/ProductSans-Black.ttf');
+}
+@font-face {
+    font-family: 'Product Sans Regular';
+    src: url('../fonts/ProductSans-Regular.ttf');
+}
+body{
+    height: 100vh;
+    font-family: 'Product Sans Regular';
+    display:grid;
+    grid-template-rows: 1fr 7fr 1fr;
+    grid-gap: 20px;
+}
+h1{
+    font-family: 'Product Sans Black';
+}
+li{
+    font-family: 'Product Sans';
+}
+
+/*Menu Mobile*/
+#menu-toggle{
+    display: none;
+}
+.menu-icon{
+
+    display: none;
+}
+@media screen and (max-width:600px){
+    header{
+        position: fixed;
+        top:0px;
+        width:100%;
+    }
+    header nav{
+        position: absolute;
+        height: 100%;
+        width:100%;
+    }
+    header nav ul{
+        display: flex;
+        position: fixed;
+        flex-wrap: wrap;
+        align-content: center;
+        top:0;
+        left:0;
+        background-color: green;
+        width:100%;
+        height: 0;
+        overflow: hidden;
+        background-color: rgba(0,0,0,0.7);
+    }
+    header nav ul li{
+        display: block;
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+    header nav ul li a{
+        display: block;
+        text-align: center;
+        width:100%;
+    }
+    .menu-icon{
+        display: block;
+        color:white;
+        width: 50px;
+        height:inherit;
+        position: absolute;
+        top:15px;
+        right:60px;
+        line-height: 60px;
+        z-index: 999;
+    }
+    .menu-icon i{
+        font-size:1.7em;
+    }
+    #menu-toggle:checked ~ label i:nth-child(2){
+        display: block;
+    }
+    #menu-toggle:checked ~ label i:first-child{
+        display: none;
+    }
+    #menu-toggle:not(checked) ~ label i:first-child{
+        display: block;
+    }
+    #menu-toggle:not(checked) ~ label i:nth-child(2){
+        display: none;
+    }
+    #menu-toggle:checked ~ ul{
+        height:100%;
+    }
+}
+
+
+
+/*Menu Mobile*/
+
+header{
+    width: vw;
+    background-color: rgb(45, 49, 53);
+    color: white; 
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 110%;
+    align-items: flex-end;
+}
+header nav ul li{
+    margin: 0 20px;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: white
+}
+section{
+    width: vw;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+.bloco{
+    flex: 1 1 350px;
+    margin: 10px;
+}
+.bloco > div {
+    min-height: 200px;
+    height: 100%;
+    min-width: 200px;
+    max-width: 800px;
+}
+.bloco > p{
+    width: 100%;
+    text-align: center;
+}
+/*Imagens*/
+#bg-1{
+ background-image: url("https://i.pinimg.com/564x/23/b2/c4/23b2c4fe0c7173eaf99c107c9ae5c27a.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position:center;
+}
+#bg-2{
+ background-image: url("https://i.pinimg.com/564x/39/d2/57/39d257808852307c8b0609aef42e7bcf.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position:center;
+}
+#bg-3{
+ background-image: url("https://i.pinimg.com/564x/bd/af/74/bdaf7421c4da54d64c27ed5c86049467.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position:center;
+}
+#bg-4{
+ background-image: url("https://i.pinimg.com/564x/d2/ea/b9/d2eab9864ef830d4f9d1f9578003863c.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position:center;
+}
+#bg-5{
+ background-image: url("https://i.pinimg.com/564x/01/78/c9/0178c91f2d85544ecdc01c68d5efcfbb.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position:center;
+}
+#bg-6{
+ background-image: url("https://i.pinimg.com/564x/7b/c8/92/7bc892afcb09bc270aa8522f381723cd.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position:center;
+}
+/*Imagens*/
+footer{
+    width: vw;
+    background-color: rgb(45, 49, 53);
+}
