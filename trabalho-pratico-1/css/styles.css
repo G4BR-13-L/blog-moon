@@ -1,0 +1,180 @@
+
+@font-face {
+    font-family: 'Product Sans';
+    src: url('../assets/fonts/ProductSans-Medium.ttf');
+}
+@font-face {
+    font-family: 'Product Sans Black';
+    src: url('../assets/fonts/ProductSans-Black.ttf');
+}
+@font-face {
+    font-family: 'Product Sans Regular';
+    src: url('../assets/fonts/ProductSans-Regular.ttf');
+}
+body{
+    font-family: 'Product Sans Regular', sans-serif;
+    margin: 0;
+    padding: 0;
+    width:100%;
+    border:0;
+}
+body strong{font-family: 'Product Sans';}
+
+h1,h2,h3{ font-family: 'Product Sans Black'; }
+
+header{
+    padding:0 !important;
+    margin: 0;
+    position: fixed !important;
+    z-index: 99;
+    top: 0;
+}
+header .navbar{ margin: 0; width: 100%; background-color: #FEFCFB;}
+.navbar-brand{font-family: 'Product Sans Black'; font-family: 0.5rem;}
+
+.carousel-section{margin-top: 60px;}
+
+.section-1{background-color: #0A1128;color: #FEFCFB;}
+
+.title-section-1{
+    text-align: center;
+    font-weight: bolder;
+    line-height: 80px;
+    height: 80px;
+}
+
+.item{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;    
+}
+.item div{ margin:0 auto; }
+
+.movie-metadata{ font-size: 1rem; }
+
+.plus-button{ margin: 50px 10px 50px auto; background-color: #001F54; color: #FEFCFB;}
+/*---------------------------*/
+.btn{background-color: #001F54; color: #FEFCFB;}
+.section-2-title{
+    margin-top: 20px;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: #04080F;
+}
+.img-destaque img{
+    width:100%;
+    margin: 10px 0;
+}
+
+/*---------------------------*/
+.section-3-title{
+    color: #04080F;
+}
+.user-rating{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    color: #04080F;
+}
+.user-image{
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    margin: 0 auto;
+}
+.user-image img{ width: 90%; } 
+
+.user-content{ font-size: 1.2rem; }
+.rating-and-date{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+/*--------------------------*/
+.section-4-title{color: #04080F;}
+.card{
+    margin:10px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 50px #666;
+    color: #04080F;
+}
+/*---------------------------*/
+.section-5{ display: grid; grid-template-columns: 3fr 1fr; color: #04080F}
+.novidade{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap:10px;
+    margin-bottom: 20px;
+}
+.novidade-img img{ width: 100%; }
+.novidade .tag{
+    background-color: #999;
+    line-height: 20px;
+    border-radius: 20px;
+    padding: 3px 10px;
+    margin: 5px;
+}
+.about{ border-left: 3px solid #333; padding: 10px; color: #04080F}
+.footer{
+    background-color: #0A1128;
+    color: #FEFCFB;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-size: 0.5rem;
+}
+
+@media screen and (max-width:768px){
+    
+    iframe{
+        width: 350px;
+        margin:0 auto;
+        height:200px;
+    }
+    .card{
+        width: 90%;
+        margin:0px;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: none;
+    }
+    .card iframe{ width: 340px; }
+    .section-5{ display: flex; flex-direction: column;}
+    .novidade{ display: flex; flex-direction: column; }
+    .novidade-content{ width:90%; margin:0 auto; }
+    .user-rating{ width: 90%;}
+}
+@media screen and (min-width:769px) and (max-width:1024px){
+
+    .section-5{ display: flex; flex-direction: column;}
+    .novidade{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap:10px;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (min-width:1560px){
+    .movie-metadata{ max-width: 500px; }
+
+    .item{
+        margin: 0 150px;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        margin-bottom: 60px;
+    }
+    .item .movie-metadata{ margin-left:20px; }
+
+}
